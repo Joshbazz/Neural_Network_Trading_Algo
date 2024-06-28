@@ -1,0 +1,29 @@
+Example Workflow
+
+Add a new package:
+    pip install some-package
+    echo some-package >> requirements.txt
+
+Generate requirements.txt from the environment:
+    pip freeze > requirements.txt
+
+Install dependencies from requirements.txt:
+    pip install -r requirements.txt
+
+Black: A code formatter.
+Flake8: A linting tool.
+IPython: An interactive shell.
+Isort: A tool to sort imports.
+JupyterLab: An interactive development environment for Jupyter notebooks.
+Loguru: A logging library.
+Matplotlib: A plotting library.
+MkDocs: A static site generator geared towards project documentation.
+Notebook: Jupyter Notebook server and client.
+Numpy: A package for numerical computing.
+Pandas: A data manipulation and analysis library.
+Pip: A package installer for Python.
+Python-Dotenv: Reads key-value pairs from a .env file and can set them as environment variables.
+Scikit-Learn: A machine learning library.
+Tqdm: A fast, extensible progress bar.
+Typer: A library for creating CLI applications.
+-e .: This is used for editable installs, indicating the current directory should be installed as a package. This is often used in conjunction with setup.py.

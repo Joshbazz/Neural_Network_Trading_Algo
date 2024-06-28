@@ -1,0 +1,13 @@
+Why is pyproject.toml Necessary?
+
+    Standardization: It provides a standardized way to specify build system requirements and project metadata.
+
+    Tool Configuration: It centralizes the configuration for various tools (like black, isort, etc.) in one file.
+
+    Build System: It defines the build system backend, which is crucial for building and packaging the project.
+
+How to Use pyproject.toml
+
+    Build System: When you run build tools (e.g., flit, poetry), they will read the build system requirements from pyproject.toml.
+
+    Tool Configuration: Tools like black and isort will use the configuration specified in the [tool.black] and [tool.ruff.lint.isort] sections.
