@@ -4,7 +4,7 @@ from keras.models import load_model
 from tensorflow.keras.utils import plot_model
 from IPython.display import Image, display
 
-def save_and_visualize_model(model, img_dir):
+def save_and_visualize_model(model_path, img_dir='visualization'):
     """
     Save the loaded model and visualize it as a PNG image.
 
@@ -13,14 +13,17 @@ def save_and_visualize_model(model, img_dir):
     - img_dir: The directory where the visualization image should be saved.
     """
 
+    model = load_model(model_path)
+
     # Generate a timestamp for the model file
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
 
     # Ensure the directory exists
     os.makedirs(img_dir, exist_ok=True)
 
     # Define the image path
     img_path = os.path.join(img_dir, f"model_{timestamp}.png")
+    print(img_path)
 
     # Plot the model and save it as a PNG image
     plot_model(
@@ -42,6 +45,6 @@ def save_and_visualize_model(model, img_dir):
     print(f"Model visualization saved and displayed from {img_path}")
 
 # Example usage:
-model = load_model('models/stock_price_prediction_model.keras')
-img_dir = 'visualizations'
+model = 'models/2024_06_30_18_04_02_stock_price_prediction_model_epochs_50.keras'
+img_dir = '/Users/joshbazz/Desktop/Bootcamp/neural_network_trading_algo/neural_network_trading_algo/visualization'
 save_and_visualize_model(model, img_dir)
