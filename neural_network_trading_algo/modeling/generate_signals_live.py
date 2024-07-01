@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 from keras.models import load_model
 from sklearn.preprocessing import RobustScaler
 import datetime
@@ -86,12 +87,32 @@ def generate_signal(model_path, data_path, test_size, window_size=40):
     # Get the current timestamp and format it
     current_timestamp = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
 
+    # Define the directory and ensure it exists
+    data_dir = os.path.join(os.path.dirname(__file__), '../data')
+    os.makedirs(data_dir, exist_ok=True)
+
+    # Define the full path for the new CSV file
+    csv_path = os.path.join(data_dir, f'{current_timestamp}_new_data_with_positions.csv')
+
     # Save new_data with positions
-    data_adjusted.to_csv(f'data/{current_timestamp}_new_data_with_positions.csv', index=True)
+    data_adjusted.to_csv(csv_path, index=True)
+
+    # # Save new_data with positions
+    # data_adjusted.to_csv(f'neural_network_trading_algo/data/{current_timestamp}_new_data_with_positions.csv', index=True)
 
     print(f"Data shape: {data_adjusted.shape}")
     print(f"Positions length: {len(positions)}")
 
     data_string = f'data/{current_timestamp}_new_data_with_positions.csv'
 
-    return data_string
+    return csv_path
+
+    # Define the directory and ensure it exists
+    data_dir = os.path.join(os.path.dirname(__file__), '../data')
+    os.makedirs(data_dir, exist_ok=True)
+
+    # Define the full path for the new CSV file
+    csv_path = os.path.join(data_dir, f'{current_timestamp}_new_data_with_positions.csv')
+
+    # Save new_data with positions
+    data_adjusted.to_csv(csv_path, index=True)

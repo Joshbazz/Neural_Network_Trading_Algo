@@ -11,4 +11,4 @@ https://api.repository.cam.ac.uk/server/api/core/bitstreams/ee20ae76-656a-47ba-b
 
 ## Run the code in colab:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Joshbazz/Neural_Network_Trading_Algo/blob/main/main.ipynb)
-
+    
