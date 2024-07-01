@@ -29,14 +29,16 @@ To install the required packages and dependencies, follow these steps:
    git clone https://github.com/Joshbazz/Neural_Network_Trading_Algo.git
    cd Neural_Network_Trading_Algo
 
-2. **Create a Virtual Environment (optional but recommended)**
-   ```bash
-   python -m venv env
-   source env/bin/activate  # On Windows use `env\Scripts\activate`
+2. **Create a Virtual Environment with Make (optional but recommended)**
+   ```makefile
+   make create_environment
+
 
 3. **Install Dependencies**
-   ```bash
-   pip install -r requirements.txt
+   ```makefile
+   make requirements
+
+**NOTE:** You'll need to locally install Graphviz and/or Make in order to run the `make` commands and create the model visualization. Links for downloading Make (Windows) are [here](https://gnuwin32.sourceforge.net/packages/make.htm), and downloads for Graphviz are included [here](https://graphviz.org).
 
 
 ## Run the Code in Google Colab
