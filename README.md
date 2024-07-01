@@ -4,6 +4,8 @@
 
 This project implements a neural network strategy for trading based on the research paper titled 'A Stock Market Trading System using Deep Neural Network' by Bang Xiang Yong, Mohd Rozaini Abdul Rahim, and Ahmad Shahidan Abdullah. You can access the paper [here](https://api.repository.cam.ac.uk/server/api/core/bitstreams/ee20ae76-656a-47ba-bf5b-fba10ee87478/content).
 
+You can view the detailed write-up about the code [here](https://joshbazzano.substack.com/p/d97c31d9-0919-465f-9584-af0e4e904131).
+
 ## Project Structure
 
 The Python implementation resides in the `neural_network_trading_algo` directory. To run the project:
