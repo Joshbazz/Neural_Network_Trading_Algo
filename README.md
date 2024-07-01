@@ -17,6 +17,26 @@ The Python implementation resides in the `neural_network_trading_algo` directory
    - Signal generation
    - Backtesting the strategy on generated signals
 
+## Installation
+
+To install the required packages and dependencies, follow these steps:
+
+1. **Clone the Repository**:
+   
+   ```bash
+   git clone https://github.com/Joshbazz/Neural_Network_Trading_Algo.git
+   cd Neural_Network_Trading_Algo
+
+2. **Create a Virtual Environment (optional but recommended)**
+   ```bash
+   python -m venv env
+   source env/bin/activate  # On Windows use `env\Scripts\activate`
+
+3. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+
+
 ## Run the Code in Google Colab
 
 If you prefer running the code without downloading the repository or if you're a non-technical user, you can run the project directly in Google Colab. Click the badge below to open the notebook in your browser:
