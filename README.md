@@ -23,5 +23,9 @@ If you prefer running the code without downloading the repository or if you're a
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Joshbazz/Neural_Network_Trading_Algo/blob/main/main.ipynb)
 
+Simply navigate to the top bar, and under Runtime, click on "Run All" (see below):
+
+![Run All in Colab](./neural_network_trading_algo/visualization/Colab_run_all.png)
+
 Note: Initial downloads may be required when running in Colab.
 
