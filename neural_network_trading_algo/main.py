@@ -43,9 +43,12 @@ backtest_data = data.iloc[-len(X_test):].copy()
 X_train_scaled, y_train_scaled = stock_predictor.normalize_data(X_train, y_train)
 X_test_scaled, y_test_scaled = stock_predictor.scaler.transform(X_test), stock_predictor.y_scaler.transform(y_test.values.reshape(-1, 1))
 
+# set the amount of epochs. default is 50
+epochs = 50
+
 # Build and train model
 stock_predictor.build_model()
-stock_predictor.train_model(X_train_scaled, y_train_scaled, epochs=50)
+stock_predictor.train_model(X_train_scaled, y_train_scaled, epochs=epochs)
 
 # # Evaluate model
 loss, predictions = stock_predictor.evaluate_model(X_test_scaled, y_test_scaled)
@@ -54,7 +57,7 @@ loss, predictions = stock_predictor.evaluate_model(X_test_scaled, y_test_scaled)
 y_test_inv, predictions_inv = stock_predictor.inverse_transform(y_test_scaled, predictions)
 
 # Save the model
-model_path = stock_predictor.save_model(epochs=50)
+model_path = stock_predictor.save_model(epochs=epochs)
 
 # uncomment when bug fixed
 save_and_visualize_model(model_path)
