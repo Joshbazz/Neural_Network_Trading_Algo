@@ -1,18 +1,16 @@
-from modeling.dnn_live import StockPricePrediction
-import time
+from modeling.dnn import StockPricePrediction
 from sklearn.model_selection import train_test_split
-from modeling.generate_signals_live import generate_signal
-# import model_plot
+from modeling.generate_signals import generate_signal
+from visualization.model_plot import save_and_visualize_model
 from backtester.backtester_live import *
-from data.fetch_data_test import fetch_and_save_data
-
+from data.fetch_data import fetch_and_save_data
 
 # Example usage
 # Define the data path
 ticker = '^STI'  # Example ticker
 start_date = '2010-01-01'
 end_date = '2017-01-03'
-file_path = f'{ticker}_data_end_{end_date}_start_{start_date}.csv'
+file_path = f'data/{ticker}_data_end_{end_date}_start_{start_date}.csv'
 
 
 fetch_and_save_data(ticker, start_date, end_date, file_path)
@@ -59,7 +57,7 @@ y_test_inv, predictions_inv = stock_predictor.inverse_transform(y_test_scaled, p
 model_path = stock_predictor.save_model(epochs=50)
 
 # uncomment when bug fixed
-# model_plot.save_and_visualize_model(model_path, img_dir='visualization')
+save_and_visualize_model(model_path)
 
 # Generate Signals csv
 signals_string = generate_signal(model_path, file_path, test_size)

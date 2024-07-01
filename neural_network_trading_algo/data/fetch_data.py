@@ -1,3 +1,4 @@
+import os
 import yfinance as yf
 import pandas as pd
 
@@ -17,16 +18,19 @@ def fetch_and_save_data(ticker, start_date, end_date, file_path):
     # Fetch the historical data
     data = yf.download(ticker, start=start_date, end=end_date)
     
+    # Ensure the directory exists before saving the file
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
     # Save the data to a CSV file
     data.to_csv(file_path)
     
     print(f"Data for {ticker} from {start_date} to {end_date} has been saved to {file_path}")
 
-# Example usage
-if __name__ == "__main__":
-    ticker = '^STI'  # Example ticker
-    start_date = '2010-01-01'
-    end_date = '2017-01-03'
-    file_path = f'{ticker}_data_end_{end_date}_start_{start_date}.csv'
+# # Example usage
+# if __name__ == "__main__":
+#     ticker = '^STI'  # Example ticker
+#     start_date = '2010-01-01'
+#     end_date = '2017-01-03'
+#     file_path = f'{ticker}_data_end_{end_date}_start_{start_date}.csv'
     
-    fetch_and_save_data(ticker, start_date, end_date, file_path)
+#     fetch_and_save_data(ticker, start_date, end_date, file_path)
