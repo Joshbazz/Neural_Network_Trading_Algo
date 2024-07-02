@@ -45,7 +45,16 @@ To install the required packages and dependencies, follow these steps:
    ```makefile
    make requirements
 
-**NOTE:** You'll need to locally install Graphviz and/or Make in order to run the `make` commands and create the model visualization. To download Make for Windows, open up Powershell and run: `winget install ezwinports.make` 
+**NOTE:** 
+Due to issues with graphviz, in `main.py`, the following is commented out. If you successfully get graphviz installed, you can uncomment.
+
+```bash
+# save_and_visualize_model(model_path)
+
+
+You'll need to locally install Graphviz and/or Make in order to run the `make` commands and create the model visualization. To download Make for Windows, open up Powershell and run: `winget install ezwinports.make` 
+
+There's an issue where using graphviz on VScode run from the Anaconda Platform is creating issues. Make sure you are running VScode explicitly from your own separate download. VScode can be downloaded [here](https://code.visualstudio.com)
 
 Links for downloading Make (Windows) are [here](https://gnuwin32.sourceforge.net/packages/make.htm), and downloads for Graphviz are included [here](https://graphviz.org).
 

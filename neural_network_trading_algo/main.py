@@ -60,7 +60,7 @@ y_test_inv, predictions_inv = stock_predictor.inverse_transform(y_test_scaled, p
 model_path = stock_predictor.save_model(epochs=epochs)
 
 #NOTE uncomment when graphviz is installed
-save_and_visualize_model(model_path)
+# save_and_visualize_model(model_path)
 
 # Generate Signals csv
 signals_string = generate_signal(model_path, file_path, test_size)
