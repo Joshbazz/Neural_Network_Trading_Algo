@@ -46,11 +46,7 @@ To install the required packages and dependencies, follow these steps:
    make requirements
 
 **NOTE:** 
-Due to issues with graphviz, in `main.py`, the following is commented out. If you successfully get graphviz installed, you can uncomment.
-
-```bash
-# save_and_visualize_model(model_path)
-
+Due to issues with graphviz, in `main.py`, the (`save_and_visualize_model(model_path)`) is commented out. If you successfully get graphviz installed, you can uncomment.
 
 You'll need to locally install Graphviz and/or Make in order to run the `make` commands and create the model visualization. To download Make for Windows, open up Powershell and run: `winget install ezwinports.make` 
 
