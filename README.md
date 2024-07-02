@@ -37,7 +37,11 @@ To install the required packages and dependencies, follow these steps:
    ```makefile
    make create_environment
 
-3. **Install Dependencies**
+3. **Activate the Environment before Downloading Requirements**
+   ```bash
+   conda activate neural_network_trading_algo
+
+4. **Install Dependencies**
    ```makefile
    make requirements
 

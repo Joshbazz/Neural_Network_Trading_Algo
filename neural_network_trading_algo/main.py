@@ -59,7 +59,7 @@ y_test_inv, predictions_inv = stock_predictor.inverse_transform(y_test_scaled, p
 # Save the model
 model_path = stock_predictor.save_model(epochs=epochs)
 
-# uncomment when bug fixed
+#NOTE uncomment when graphviz is installed
 save_and_visualize_model(model_path)
 
 # Generate Signals csv
