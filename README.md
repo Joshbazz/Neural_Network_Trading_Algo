@@ -38,7 +38,7 @@ To install the required packages and dependencies, follow these steps:
    ```makefile
    make requirements
 
-**NOTE:** You'll need to locally install Graphviz and/or Make in order to run the `make` commands and create the model visualization. To download Make for Windows, open up Powershell and run: winget install ezwinports.make 
+**NOTE:** You'll need to locally install Graphviz and/or Make in order to run the `make` commands and create the model visualization. To download Make for Windows, open up Powershell and run: winget `install ezwinports.make` 
 Links for downloading Make (Windows) are [here](https://gnuwin32.sourceforge.net/packages/make.htm), and downloads for Graphviz are included [here](https://graphviz.org).
 
 
