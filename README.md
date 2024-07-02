@@ -30,7 +30,7 @@ To install the required packages and dependencies, follow these steps:
    cd Neural_Network_Trading_Algo
 
 3. **Install Make with Conda if not Already Installed (optional but recommended)**
-   ``bash
+   ```bash
    conda install -c conda-forge make
 
 2. **Create a Virtual Environment with Make (optional but recommended)**
