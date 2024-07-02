@@ -37,7 +37,6 @@ To install the required packages and dependencies, follow these steps:
    ```makefile
    make create_environment
 
-
 3. **Install Dependencies**
    ```makefile
    make requirements
